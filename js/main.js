@@ -51,7 +51,7 @@ const envio = () => {
     if (total >= 5000) {
       alert("El envio es gratuito")
     }else{
-      total += 1
+      total += 400
       alert("El costo de envio es de $400, el total es: " + total)
     }
 }
