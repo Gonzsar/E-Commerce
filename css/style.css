@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.producto {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.producto img {
+    max-width: 100%;
+}
+.producto h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+.producto button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.producto button:hover {
+    background: #555;
+}
+#cart {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#cart h2 {
+    margin: 0;
+}
+#cart ul {
+    list-style: none;
+    padding: 0;
+}
+#cart ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+#cart button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+#cart button:hover {
+    background: #000000;
+}
+#messages {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #ffdddd;
+}
