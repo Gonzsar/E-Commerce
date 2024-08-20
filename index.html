@@ -5,68 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Tienda Online</h1>
-        <div id="messages"></div>
         <div id="productos">
             <div class="producto">
                 <img src="./images/22705018-tzimasparts-tilehiristirio-klimatistikou-kt-9018e.jpg" alt="Producto 1">
                 <h3>Control Universal A/C</h3>
                 <p>$390</p>
-                <button onclick="addToCart('Producto 1', 390)">Añadir al carrito</button>
+                <button onclick="addToCart('Control Universal A/C', 390)">Añadir al carrito</button>
             </div>
             <div class="producto">
                 <img src="./images/D_616776-MLA46007431895_052021-C.jpg" alt="Producto 2">
                 <h3>Placa Universal A/C </h3>
                 <p>$1200</p>
-                <button onclick="addToCart('Producto 2', 1200)">Añadir al carrito</button>
+                <button onclick="addToCart('Placa Universal A/C', 1200)">Añadir al carrito</button>
             </div>
             <div class="producto">
                 <img src="./images/SMAPPB.jpg" alt="Producto 3">
                 <h3>Garrafa MAPP</h3>
                 <p>$590</p>
-                <button onclick="addToCart('Producto 3', 590)">Añadir al carrito</button>
+                <button onclick="addToCart('Garrafa MAPP', 590)">Añadir al carrito</button>
             </div>
             <div class="producto">
                 <img src="./images/kit-manifold-r22-r134-r404-com-mangueiras-90cm_4662.jpg" alt="Producto 4">
                 <h3>Manifold</h3>
                 <p>$2900</p>
-                <button onclick="addToCart('Producto 4', 2900)">Añadir al carrito</button>
+                <button onclick="addToCart('Manifold', 2900)">Añadir al carrito</button>
             </div>
             <div class="producto">
                 <img src="./images/sellador-fugas-1-dosis-12ml-standard-aire-acondicionado-climatizador-category.jpg" alt="Producto 5">
                 <h3>Sellafugas 12ml</h3>
                 <p>$600</p>
-                <button onclick="addToCart('Producto 5', 600)">Añadir al carrito</button>
+                <button onclick="addToCart('Sellafugas 12ml', 600)">Añadir al carrito</button>
             </div>
             <div class="producto">
                 <img src="./images/Bomba-1L.jpg" alt="Producto 6">
                 <h3>Aceite para Bomba de vacío 1 Lt</h3>
                 <p>$690</p>
-                <button onclick="addToCart('Producto 6', 690)">Añadir al carrito</button>
+                <button onclick="addToCart('Aceite para Bomba de vacío 1 Lt', 690)">Añadir al carrito</button>
             </div>
             <div class="producto">
                 <img src="./images/D_768700-MLA72862302226_112023-C.jpg" alt="Producto 7">
                 <h3>Gas R600a 750ml</h3>
                 <p>$790</p>
-                <button onclick="addToCart('Producto 7', 790)">Añadir al carrito</button>
+                <button onclick="addToCart('Gas R600a 750ml', 790)">Añadir al carrito</button>
             </div>
             <div class="producto">
                 <img src="./images/High-Quality-PVC-Air-Conditioning-Pipe-Wrapping-Tape-Without-Glue.jpg" alt="Producto 8">
                 <h3>Cinta PVC</h3>
                 <p>$120</p>
-                <button onclick="addToCart('Producto 8', 120)">Añadir al carrito</button>
+                <button onclick="addToCart('Cinta PVC', 120)">Añadir al carrito</button>
             </div>
         </div>
-        <div id="cart">
-            <h2>Carrito de compras</h2>
-            <ul id="cartItems"></ul>
-            <p>Total: $<span id="total">0.00</span></p>
-            <button id="purchaseButton" onclick="purchaseCart()">COMPRAR</button>
+        <div id="cart" class="cart-closed">
+            <div id="cartButton">
+                <span>🛒 Carrito</span>
+            </div>
+            <div id="cartContent">
+                <h2>Tu Carrito</h2>
+                <ul id="cartItems"></ul>
+                <p>Total: $<span id="total">0.00</span></p>
+                <button id="purchaseButton" onclick="purchaseCart()">COMPRAR</button>
+            </div>
         </div>
+        <div id="messages"></div>        
     </div>
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

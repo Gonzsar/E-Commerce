@@ -41,38 +41,95 @@ body {
     background: #555;
 }
 #cart {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    background-color: #f8f9fa;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
-#cart h2 {
-    margin: 0;
-}
-#cart ul {
-    list-style: none;
-    padding: 0;
-}
-#cart ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-#cart button {
-    background: #333;
+
+#cartButton {
+    background-color: #eb7222;
     color: white;
     padding: 10px;
-    border: none;
     cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
+    text-align: center;
 }
-#cart button:hover {
-    background: #000000;
+
+#cartButton:hover {
+    background-color: #bb6328;
 }
-#messages {
-    margin: 20px 0;
+
+#cartButton span {
+    font-weight: bold;
+}
+
+#cartContent {
+    display: none;
     padding: 10px;
-    border: 1px solid #ddd;
-    background: #ffdddd;
 }
+
+.cart-open #cartContent {
+    display: block;
+}
+
+.cart-closed #cartContent {
+    display: none;
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cartItems li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cartItems li:last-child {
+    border-bottom: none;
+}
+
+#total {
+    font-weight: bold;
+}
+
+#purchaseBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#purchaseBtn:hover {
+    background-color: #218838;
+}
+
+#messages {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    font-size: 14px;
+}
+
