@@ -7,7 +7,7 @@ const messages = [
     "¡Descuentos especiales que pueden ser tuyos!"
 ];
 
-// Función para agregar al carrito
+// agregar al carrito
 function addToCart(product, price) {
     const existingProduct = carrito.find(item => item.product === product);
 
@@ -21,7 +21,7 @@ function addToCart(product, price) {
     logPurchase(product, price);
 }
 
-// Función para mostrar el carrito
+// mostrar el carrito
 function displayCart() {
     const cartItems = document.getElementById('cartItems');
     const total = document.getElementById('total');
@@ -39,7 +39,7 @@ function displayCart() {
 
     total.innerText = totalPrice.toFixed(2);
 
-    // Añadir event listeners a los botones de "Quitar uno" y "Quitar todos"
+    // event listeners a los botones de "Quitar uno" y "Quitar todos"
     document.querySelectorAll('.remove-one-btn').forEach(button => {
         button.addEventListener('click', ({ target }) => removeOneFromCart(target.dataset.index));
     });
@@ -48,7 +48,7 @@ function displayCart() {
     });
 }
 
-// Función para quitar una unidad del carrito
+// quitar una unidad del carrito
 function removeOneFromCart(index) {
     carrito[index].quantity > 1 
         ? carrito[index].quantity -= 1 
@@ -58,27 +58,27 @@ function removeOneFromCart(index) {
     displayCart();
 }
 
-// Función para quitar todos los productos de un tipo del carrito
+// quitar todos los productos de un tipo del carrito
 function removeAllFromCart(index) {
     carrito.splice(index, 1);
     updateStorage();
     displayCart();
 }
 
-// Función para mostrar mensajes al usuario
+// mostrar mensajes al usuario
 function showMessage(message) {
     const messagesDiv = document.getElementById('messages');
     messagesDiv.innerHTML = `<p>${message}</p>`;
     setTimeout(() => messagesDiv.innerHTML = '', 9000);
 }
 
-// Función para registrar las compras en la consola
+// registrar las compras en la consola
 function logPurchase(product, price) {
     console.log(`Producto añadido: ${product} - $${price.toFixed(2)}`);
     console.log('Carrito actual:', carrito);
 }
 
-// Función para realizar la compra del carrito
+// realizar la compra del carrito
 function purchaseCart() {
     if (!carrito.length) {
         return Swal.fire({
@@ -112,7 +112,7 @@ function purchaseCart() {
 }
 
 
-// Función para actualizar el almacenamiento local
+// actualizar el almacenamiento local
 function updateStorage() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
