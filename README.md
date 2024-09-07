@@ -19,9 +19,6 @@ Se utilizan librerías como **Toastify** para mostrar notificaciones al agregar 
 ### 5. Asincronía
 Se utilizan operaciones asincrónicas con `fetch()`.
 
-### 6. Hosting
-Servidor alojado en **Netlify** para una mayor comodidad y estética en el enlace.
-
 ## Tecnologías Utilizadas
 
 - **HTML**: Estructura del sitio.
@@ -29,4 +26,4 @@ Servidor alojado en **Netlify** para una mayor comodidad y estética en el enlac
 - **JavaScript**: Manejo del DOM, lógica del carrito y operaciones asincrónicas.
 - **LocalStorage**: Persistencia de datos del carrito.
 - **Toastify y SweetAlert**: Notificaciones para el usuario.
-- **Git, GitHub y Netlify**: Control de versiones y alojamiento.
+- **Git y GitHub**: Control de versiones y alojamiento.
