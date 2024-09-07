@@ -25,8 +25,8 @@ h1 {
 /* Lista de productos */
 #productList {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 30px; /* Más espacio entre productos */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /* Estilo para cada producto */
@@ -51,12 +51,12 @@ h1 {
 .product-image {
     width: 100%;
     max-width: 250px;
-    height: 250px; /* Tamaño fijo para todas las imágenes */
-    object-fit: contain; /* Mantiene el aspecto de la imagen dentro del contenedor */
+    height: 250px;
+    object-fit: contain; 
     margin-bottom: 15px;
     border-radius: 8px;
-    margin-left: auto;  /* Centrar horizontalmente */
-    margin-right: auto; /* Centrar horizontalmente */
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 /* Botones de agregar al carrito */
@@ -107,7 +107,7 @@ h1 {
 /* Contenido del carrito */
 #cartContent {
     padding: 10px;
-    max-height: 400px; /* Altura máxima del carrito */
+    max-height: 400px;
     overflow-y: auto; /* Agrega barra de desplazamiento vertical */
 }
 
@@ -139,18 +139,17 @@ h1 {
     border-bottom: none;
 }
 
-/* Opcional: estilo personalizado para la barra de desplazamiento */
 #cartContent::-webkit-scrollbar {
     width: 8px;
 }
 
 #cartContent::-webkit-scrollbar-thumb {
-    background-color: #343a40;; /* Color de la barra */
+    background-color: #343a40;
     border-radius: 10px;
 }
 
 #cartContent::-webkit-scrollbar-track {
-    background-color: #f4f4f4; /* Color del fondo de la barra */
+    background-color: #f4f4f4; 
 }
 
 /* Total del carrito */
@@ -179,7 +178,7 @@ h1 {
     background-color: #218838;
 }
 
-/* Ajuste del botón de inicio de sesión */
+/*botón de inicio de sesión */
 .login-container {
     position: absolute;
     top: 20px;
@@ -203,9 +202,7 @@ h1 {
     background-color: #218838;
 }
 
-/* Responsive: Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Coloca el botón de inicio de sesión debajo del carrito en pantallas pequeñas */
     #productList {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -215,12 +212,11 @@ h1 {
     }
     .product-image {
         max-width: 180px;
-        height: 180px; /* Tamaño fijo para pantallas más pequeñas */
+        height: 180px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Ajusta la posición del botón aún más abajo en pantallas muy pequeñas */
     .login-container {
         top: 120px;
         left: 20px;

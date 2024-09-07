@@ -13,25 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
 // Función para deshabilitar las funcionalidades del carrito
 function disableCartFeatures() {
     const cartBtn = document.getElementById('cartButton');
-    cartBtn.style.pointerEvents = 'none';  // Deshabilita el botón del carrito
-    cartBtn.style.opacity = '0.5';  // Reduce la opacidad para mostrar que está deshabilitado
+    cartBtn.style.pointerEvents = 'none'; 
+    cartBtn.style.opacity = '0.5';
 
     const productButtons = document.querySelectorAll('.add-to-cart-btn');
     productButtons.forEach(button => {
-        button.disabled = true;  // Deshabilita los botones de añadir al carrito
-        button.style.opacity = '0.5';  // Reduce la opacidad
+        button.disabled = true; 
+        button.style.opacity = '0.5';
     });
 }
 
 // Función para habilitar las funcionalidades del carrito después del inicio de sesión
 function enableCartFeatures() {
     const cartBtn = document.getElementById('cartButton');
-    cartBtn.style.pointerEvents = 'auto';  // Habilita el botón del carrito
+    cartBtn.style.pointerEvents = 'auto';
     cartBtn.style.opacity = '1';
 
     const productButtons = document.querySelectorAll('.add-to-cart-btn');
     productButtons.forEach(button => {
-        button.disabled = false;  // Habilita los botones de añadir al carrito
+        button.disabled = false; 
         button.style.opacity = '1';
     });
 }
@@ -55,12 +55,11 @@ document.getElementById('loginBtn').addEventListener('click', () => {
             let userName = result.value;
             document.getElementById('welcomeMessage').textContent = `Bienvenido, ${userName}!`;
             document.getElementById('welcomeMessage').style.display = 'inline';
-            document.getElementById('loginBtn').style.display = 'none';  // Opcional: Ocultar el botón de inicio de sesión
+            document.getElementById('loginBtn').style.display = 'none'; 
 
             // Cambia el estado de sesión
             loggedIn = true;
 
-            // Muestra un mensaje de confirmación
             Swal.fire({
                 title: '¡Perfecto!',
                 text: 'Ya puedes añadir productos a tu carrito',
@@ -69,7 +68,6 @@ document.getElementById('loginBtn').addEventListener('click', () => {
                 showConfirmButton: false
             });
 
-            // Habilita las funciones del carrito
             enableCartFeatures();
         }
     });
